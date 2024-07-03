@@ -19,14 +19,17 @@ function ticketPrice(ticketQuantity) {
     // যদি টিকিট সংখ্যা ১০০ বা তার কম হয়
     const price1 = ticketQuantity * first100;
     return price1;
-  } else if (ticketQuantity <= 200) {
+  } 
+  else if (ticketQuantity <= 200) {
     // যদি টিকিট সংখ্যা ১০১ থেকে ২০০ এর মধ্যে হয়
     const first100Price = 100 * first100;
     const restOfticketQuantity = ticketQuantity - 100;
     const restOfticketQuantityPrice = restOfticketQuantity * second200;
     const price2 = first100Price + restOfticketQuantityPrice;
     return price2;
-  } else {
+  }
+
+  else {
     // যদি টিকিট সংখ্যা ২০০ এর বেশি হয়
     const first100Price = 100 * first100;
     const second100Price = 100 * second200;
@@ -38,7 +41,7 @@ function ticketPrice(ticketQuantity) {
 }
 
 // ফাংশন কল করার সময় সঠিক নাম ব্যবহার করতে হবে
-const ticketPrices = ticketPrice(120);
+const ticketPrices = ticketPrice(201);
 console.log(ticketPrices);
 
 
